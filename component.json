@@ -1,5 +1,5 @@
 {
-  "name": "emblem",
+  "name": "emblem.js",
   "version":  "0.1.12",
   "main": ["./emblem.js", "./emblem.min.js"],
   "dependencies": {
