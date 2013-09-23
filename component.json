@@ -1,8 +1,0 @@
-{
-  "name": "emblem.js",
-  "version":  "0.1.12",
-  "main": ["./emblem.js", "./emblem.min.js"],
-  "dependencies": {
-    "handlebars": ">= 1.0.0-rc.2"
-  }
-}
