@@ -1,9 +1,9 @@
 {
-  "name": "ember",
+  "name": "emblem.js",
   "version": "0.3.2",
   "main": [
     "./emblem.js",
-    "./emblem.min.js",
+    "./emblem.min.js"
   ],
   "dependencies": {
     "handlebars": "1.0.0"
