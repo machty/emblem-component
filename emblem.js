@@ -103,7 +103,7 @@ this.Emblem = {};
 
 Emblem = this.Emblem;
 
-Emblem.VERSION = "0.3.7";
+Emblem.VERSION = "0.3.8";
 
 module.exports = Emblem;
 
@@ -5825,7 +5825,7 @@ Emblem.Parser = (function() {
 
       function createProgramNode(statements, inverse) {
         if (use11AST) {
-          return new AST.ProgramNode(statements, { left: false, right: false}, inverse);
+          return new AST.ProgramNode(statements, { left: false, right: false}, inverse, null);
         } else {
           return new AST.ProgramNode(statements, inverse);
         }
