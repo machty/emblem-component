@@ -103,7 +103,7 @@ this.Emblem = {};
 
 Emblem = this.Emblem;
 
-Emblem.VERSION = "0.3.11";
+Emblem.VERSION = "0.3.12";
 
 module.exports = Emblem;
 
@@ -683,6 +683,9 @@ Emblem.Parser = (function() {
         peg$c147 = "[A-Za-z.0-9_\\-]",
         peg$c148 = function(id) { return createMustacheNode([id], null, true); },
         peg$c149 = function(event, mustacheNode) {
+          // Replace the IdNode with a StringNode to prevent unquoted action deprecation warnings
+          mustacheNode.id = new AST.StringNode(mustacheNode.id.string);
+
           // Unshift the action helper and augment the hash
           return [unshiftParam(mustacheNode, 'action', [['on', new AST.StringNode(event)]])];
         },

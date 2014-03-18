@@ -1,6 +1,6 @@
 {
   "name": "emblem.js",
-  "version": "0.3.8",
+  "version": "0.3.12",
   "main": [
     "./emblem.js",
     "./emblem.min.js"
