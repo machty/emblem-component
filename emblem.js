@@ -103,7 +103,7 @@ this.Emblem = {};
 
 Emblem = this.Emblem;
 
-Emblem.VERSION = "0.3.15";
+Emblem.VERSION = "0.3.16";
 
 module.exports = Emblem;
 
@@ -336,7 +336,7 @@ Emblem.Parser = (function() {
             return new AST.PartialNode(n, sexpr.params[0]);
           }
 
-          var mustacheNode
+          var mustacheNode;
           if (useSexprNodes) {
             mustacheNode = createMustacheNode(sexpr, null, true);
           } else {
@@ -5254,9 +5254,13 @@ Emblem.Parser = (function() {
       s0 = peg$currPos;
       s1 = [];
       s2 = peg$parsenmchar();
-      while (s2 !== null) {
-        s1.push(s2);
-        s2 = peg$parsenmchar();
+      if (s2 !== null) {
+        while (s2 !== null) {
+          s1.push(s2);
+          s2 = peg$parsenmchar();
+        }
+      } else {
+        s1 = peg$c0;
       }
       if (s1 !== null) {
         s1 = input.substring(s0, peg$currPos);
